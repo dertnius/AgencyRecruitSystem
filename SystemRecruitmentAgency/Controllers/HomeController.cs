@@ -10,7 +10,7 @@ namespace SystemRecruitmentAgency.Controllers
     {
         public ActionResult Index()
         {
-            ViewBag.Message = "Modify this template to jump-start your ASP.NET MVC application.";
+            ViewBag.Message = "Welcome visitor, please go ahead filling the form's application";
 
             return View();
         }
