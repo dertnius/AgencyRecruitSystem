@@ -181,15 +181,15 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Content Include="Controllers\AccountController.cs" />
-    <Content Include="Controllers\HomeController.cs" />
-    <Content Include="Controllers\ApplicantController.cs" />
-    <Content Include="Controllers\SkillController.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ApplicantController.cs" />
+    <Compile Include="Controllers\SkillController.cs" />
     <Compile Include="Controllers\Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Content Include="Models\AccountModels.cs" />
+    <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\PersonalInformationModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
