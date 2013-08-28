@@ -1,4 +1,4 @@
-﻿@model SystemRecruitmentAgency.Models.Applicant
+﻿@model IEnumerable<SystemRecruitmentAgency.Models.Applicant>
 
 @{
     ViewBag.Title = "Index";
@@ -6,38 +6,75 @@
 
 <h2>Index</h2>
 
-<fieldset>
-    <legend>Applicant</legend>
-
-    <div class="display-label">
-         @Html.DisplayNameFor(model => model.Firstname)
-    </div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.Firstname)
-    </div>
-
-    <div class="display-label">
-         @Html.DisplayNameFor(model => model.Surname)
-    </div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.Surname)
-    </div>
-
-    <div class="display-label">
-         @Html.DisplayNameFor(model => model.Telephone)
-    </div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.Telephone)
-    </div>
-
-    <div class="display-label">
-         @Html.DisplayNameFor(model => model.Email)
-    </div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.Email)
-    </div>
-</fieldset>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id=Model.ApplicantId}) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Create New", "Create")
 </p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Firstname)
+            
+        </th>
+
+        <th>
+
+        
+            @Html.DisplayNameFor(model => model.Surname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Telephone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TotalScore)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Position)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td width="100">
+            
+            @Html.DisplayFor(modelItem => item.Firstname)
+            <br />
+        </td>
+        <td width="100">
+            @(item.Surname == null ? "NULL" : item.Surname)
+           @* @Html.DisplayFor(modelItem => item.Surname)*@
+        </td>
+        <td width="100">
+             @(item.Telephone == null ? "NULL" : item.Telephone)
+            @*@Html.DisplayFor(modelItem => item.Telephone)*@
+        </td width="120">
+        <td>
+
+             @(item.Email == null ? "NULL" : item.Email)
+     @*       @Html.DisplayFor(modelItem => item.Email)*@
+        </td>
+        <td width="70">
+             @(item.TotalScore == null ? "NULL" : item.TotalScore)
+         @*   @Html.DisplayFor(modelItem => item.TotalScore)*@
+        </td>
+        <td width="120">
+             @(item.Position == null ? "NULL" : item.Position)
+           @* @Html.DisplayFor(modelItem => item.Position)*@
+        </td>
+         <td>
+         @Html.ActionLink("Edit", "Edit", new { id=item.ApplicantId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ApplicantId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ApplicantId })
+
+
+    </td>
+    </tr>
+
+   
+     
+}
+</table>
+

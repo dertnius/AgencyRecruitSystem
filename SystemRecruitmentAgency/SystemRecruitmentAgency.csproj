@@ -185,6 +185,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Agency.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Agency.dbml</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\AuthConfig.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
@@ -264,6 +269,17 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="Images\logo.png" />
+    <Content Include="Views\Applicant\Index.cshtml" />
+    <Content Include="Views\Applicant\Details.cshtml" />
+    <Content Include="Views\Applicant\Create.cshtml" />
+    <Content Include="Views\Applicant\Edit.cshtml" />
+    <Content Include="Views\Applicant\Delete.cshtml" />
+    <Content Include="Agency.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Agency.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="_bin_deployableAssemblies\x86\sqlcese40.dll" />
     <None Include="_bin_deployableAssemblies\x86\sqlceqp40.dll" />
     <None Include="_bin_deployableAssemblies\x86\sqlceme40.dll" />
@@ -334,13 +350,6 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Web.config" />
-    <Content Include="Views\Applicant\PersonalInformation.cshtml" />
-    <Content Include="Views\Applicant\Index.cshtml" />
-    <Content Include="Views\Applicant\Add.cshtml" />
-    <Content Include="Views\Applicant\Details.cshtml" />
-    <Content Include="Views\Applicant\Create.cshtml" />
-    <Content Include="Views\Applicant\Edit.cshtml" />
-    <Content Include="Views\Applicant\Delete.cshtml" />
     <Content Include="Views\Skills\Index.cshtml" />
     <Content Include="Views\Skills\Details.cshtml" />
     <Content Include="Views\Skills\Create.cshtml" />
@@ -354,6 +363,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Agency.dbml.layout">
+      <DependentUpon>Agency.dbml</DependentUpon>
+    </None>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
