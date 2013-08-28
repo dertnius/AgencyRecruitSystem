@@ -205,7 +205,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\Agency.mdf" />
-    <Content Include="App_Data\Agency.sdf" />
     <Content Include="App_Data\Agency_log.ldf">
       <DependentUpon>Agency.mdf</DependentUpon>
     </Content>
