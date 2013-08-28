@@ -199,13 +199,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201308272331414_InitialCreate.cs" />
-    <Compile Include="Migrations\201308272331414_InitialCreate.Designer.cs">
-      <DependentUpon>201308272331414_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\PersonalInformationModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -362,11 +355,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201308272331414_InitialCreate.resx">
-      <DependentUpon>201308272331414_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
