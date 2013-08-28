@@ -6,6 +6,7 @@ using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using System.Data.Entity.Migrations;
 
 namespace SystemRecruitmentAgency
 {
@@ -23,6 +24,8 @@ namespace SystemRecruitmentAgency
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             AuthConfig.RegisterAuth();
+            var migrator = new DbMigrator(new Migrations.Configuration());
+            migrator.Update();
         }
     }
 }
